@@ -1,0 +1,14 @@
+[Unit]
+Description=Glassfish Service
+
+[Service]
+Type=simple
+User={{ glassfish_user }}
+Group={{ glassfish_user }}
+ExecStart=/opt/glassfish4/glassfish/bin/startserv  
+StandardOutput=journal
+StandardError=journal
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
